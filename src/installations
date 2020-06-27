@@ -1,0 +1,5 @@
+npm install moment
+npm install --save redux @angular-redux/store
+npm install --save redux-logger
+npm install --save-dev @types/redux-logger
+npm install --save redux-devtools-extension

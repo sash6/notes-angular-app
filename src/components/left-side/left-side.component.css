@@ -1,0 +1,39 @@
+.noteButtonStyle {
+    height: 10vh !important;   
+    text-align: left !important;
+    padding-left: 20px !important; 
+    border-top: none !important;
+    border-bottom: 1px solid #ddd !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    width: -webkit-fill-available !important;   
+    /* padding-right: 65px; */
+    margin-right: 2px !important;
+    margin-bottom: 2px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+.newNoteStyle {
+    /* background: blanchedalmond !important; */
+    height: 10vh !important;   
+    text-align: left !important;
+    padding-left: 20px !important; 
+    border-top: none !important;
+    border-bottom: 1px solid #ddd !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    width: -webkit-fill-available !important;   
+    /* padding-right: 65px; */
+    padding-top: 10px !important;
+    margin-right: 2px !important;
+    margin-bottom: 2px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+.noteButtonStyle:hover {
+    background: blanchedalmond !important;
+}
