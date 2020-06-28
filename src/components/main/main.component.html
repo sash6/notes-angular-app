@@ -1,0 +1,21 @@
+<div style="min-height: 10vh;border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+  <h1 style="text-align: center;">{{title}}</h1>
+  <div class="buttonsDiv">    
+    <img  style="width: 18px;height: 22px; margin-right: 10px;cursor: pointer;" src="../assets/images/pen.png" (click)="saveNote()"/>
+    <i  style="margin-right: 10px;cursor: pointer;" class="material-icons" (click)="deleteNote()">delete</i>        
+    <input style="border: none; outline: none;background: #ddd;padding-left: 15px;border-radius: 5px;height: 26px;" type="text" placeholder="Search" name="searchField" 
+      autoComplete='false' (input)="onChangeSearchFieldCharacters($event)" />
+  </div>
+</div>
+
+<div class="separationDiv">
+
+  <div style="width: 30%; overflow: scroll; scrollbar-width: thin; border-right: 1px solid #ddd;">    
+    <app-notes-list (showNewNoteEmitter) ="showNewNote($event)" (clickedNote)="showNoteOnRightSide($event)" [noteFromRightSide]='receivedNotes' [savedNotes]="notesArr"></app-notes-list>     
+  </div>
+
+  <div style="width: 70%">
+    <app-notes-input  [onClickedNote]='noteToBeShownOnRightSide' [isNoteCreated]="noteCreated" (messageToEmit)="getNotesData($event)"></app-notes-input>
+  </div>
+
+</div>

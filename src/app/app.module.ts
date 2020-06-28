@@ -7,8 +7,9 @@ import { Globals } from '../services/globals'
 // import { rootReducer } from './reducers';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LeftSideComponent } from '../components/left-side/left-side.component';
-import { RightSideComponent } from '../components/right-side/right-side.component';
+import { MainComponent } from '../components/main/main.component';
+import { NotesListComponent } from '../components/notes-list/notes-list.component';
+import { NotesInputComponent } from '../components/notes-input/notes-input.component';
 
 interface IAppState {
   /* ... */
@@ -21,9 +22,10 @@ interface IAppState {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LeftSideComponent,
-    RightSideComponent
+    AppComponent,    
+    MainComponent,
+    NotesListComponent,
+    NotesInputComponent
   ],
   imports: [
     BrowserModule,

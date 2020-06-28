@@ -6,3 +6,4 @@ npm install --save redux-devtools-extension
 
 //for deploying the application to heroku 
 npm install --save express path
+npm install rxjs

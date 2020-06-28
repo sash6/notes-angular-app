@@ -1,0 +1,15 @@
+<div>
+
+  <button class="noteButtonStyle" (click)="showNewNote()" [ngStyle]="newNoteBooleanVar && {'background': 'blanchedalmond'}" >
+    {{noteFromRightSide}}<br/>{{date}}
+  </button>
+
+  <div *ngIf="savedNotes!=null && savedNotes.length>0">
+    <div *ngFor="let note of savedNotes.slice().reverse(); index as i;" >    
+      <button class="noteButtonStyle" (click)="showNoteContent(i)" attr.id="id{{i}}" [ngStyle]="id[i] && {'background': 'blanchedalmond'}">
+        {{note.content}}<br/>{{note.timestamp}}
+      </button>
+    </div>
+  </div>
+
+</div>
