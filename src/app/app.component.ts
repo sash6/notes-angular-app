@@ -20,12 +20,12 @@ export class AppComponent {
   isNoteDeleted: boolean = false;
   storedNotes: object[] = [];
   constructor(public gobalVariables: Globals) {
-    console.log('notes from local storage in app.component:::', JSON.parse(localStorage.getItem('notes')))
+    // console.log('notes from local storage in app.component:::', JSON.parse(localStorage.getItem('notes')))
 
     // localStorage.clear() 
     let prevNotes = [];
     prevNotes = JSON.parse(localStorage.getItem('notes'));
-    console.log('prevNotes:::', prevNotes)
+    // console.log('prevNotes:::', prevNotes)
     if (prevNotes != null && prevNotes.length > 0) {
       this.storedNotes = prevNotes
       this.dupNotesArr = prevNotes
