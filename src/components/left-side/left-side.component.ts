@@ -32,13 +32,10 @@ export class LeftSideComponent implements OnInit {
    }
 
    ngOnChanges(): void {
-    this.newNoteBooleanVar = true  
-    // console.log('ngOnChanges:::: in left side')    
+    this.newNoteBooleanVar = true         
     if (this.notesFromRightSide == null) {
        this.notesFromRightSide = 'New Note';
-    }
-    //  }else    
-    //   this.savedNotesArr = this.savedNotes
+    }   
     if(this.savedNotes.length>0)
       this.savedNotesArr = this.savedNotes
     else
