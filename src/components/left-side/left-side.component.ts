@@ -70,6 +70,13 @@ export class LeftSideComponent implements OnInit {
     console.log('notesFromRightSide::::', this.notesFromRightSide)    
   }
 
+  showNewNote() {
+    this.newNoteBooleanVar =true
+    this.savedNotesArr.map((note,index) => {
+      this.id[index] = false
+    }) 
+  }
+
   showNoteContent(noteIndex) {  
     this.savedNotesArr.map((note,index) => {
       this.id[index] = false
