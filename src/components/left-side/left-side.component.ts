@@ -19,8 +19,12 @@ export class LeftSideComponent implements OnInit {
   @Output() clickedNote = new EventEmitter<any>();
   savedNotesArr:string[] =[];
   date:any;
-  constructor() {  
-    this.savedNotesArr = JSON.parse(localStorage.getItem('notes'))
+  constructor() { 
+    let prevNotes = []; 
+    prevNotes = JSON.parse(localStorage.getItem('notes'));    
+    if(prevNotes!=null && prevNotes.length>0)
+      this.savedNotesArr = JSON.parse(localStorage.getItem('notes')) 
+
     this.start();
     setInterval(() => {
       this.date = moment().format('LT')
