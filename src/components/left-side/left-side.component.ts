@@ -76,6 +76,11 @@ export class LeftSideComponent implements OnInit {
     this.savedNotesArr.map((note,index) => {
       this.id[index] = false
     }) 
+    var obj={
+      'note': '',
+      'index':-1
+    } 
+    this.clickedNote.emit(obj)
   }
 
   showNoteContent(noteIndex) {  
